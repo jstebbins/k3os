@@ -35,6 +35,7 @@ RUN apk --no-cache add \
     strace \
     sudo \
     tar \
+    udev \
     util-linux \
     vim \
     xz
@@ -42,3 +43,6 @@ RUN apk --no-cache add \
     --repository 'http://dl-cdn.alpinelinux.org/alpine/edge/community' \
     --repository 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' \
     efibootmgr
+RUN rc-update add udev sysinit
+RUN rc-update add udev-trigger sysinit
+RUN rc-update add udev-settle sysinit
