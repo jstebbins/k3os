@@ -31,6 +31,7 @@ RUN apk --no-cache add \
     openssh-server \
     parted \
     procps \
+    rpcbind \
     rsync \
     strace \
     sudo \
@@ -46,3 +47,4 @@ RUN apk --no-cache add \
 RUN rc-update add udev sysinit
 RUN rc-update add udev-trigger sysinit
 RUN rc-update add udev-settle sysinit
+RUN rc-update add rpcbind sysinit
