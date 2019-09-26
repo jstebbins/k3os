@@ -31,6 +31,7 @@ RUN apk --no-cache add \
     openssh-server \
     parted \
     procps \
+    rpcbind \
     rsync \
     strace \
     sudo \
